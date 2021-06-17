@@ -71,10 +71,11 @@ def greeting():
         {"age": 18, "name": "Teresa"}, 
         {"age": 22, "name": "Asha"}
         ]
+
     now= datetime.now()
-    
-    
-    print( f"Hello {students}you were born in the year ")
+    for a in students:
+        current = now.year - a["age"]
+        print( "Hello {} you were born in {}".format(a["name"],current))
 greeting()
 
 #8.
